@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Details - FindHuntr</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.program-details {
+    background-image: url('https://img.freepik.com/free-photo/blue-concrete-textured-wall_53876-94019.jpg?t=st=1730368694~exp=1730372294~hmac=96a121cf3b26d7605033251448099f3ddec6b7c8fada5ac13e58fb45c206307d&w=740');
+    background-size: cover;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.program-details .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.program-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.program-header p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.program-overview,
+.program-scope,
+.program-rules,
+.program-rewards {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 10px 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.submission-form input,
+.submission-form textarea,
+.submission-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submission-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submission-form button:hover {
+    background-color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">FindHuntr</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="./login.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="program-details">
+        <div class="container">
+            <div class="program-header">
+                <h1>XYZ Corporation Bug Bounty Program</h1>
+                <p>Welcome to the official bug bounty program for XYZ Corporation. Help us improve our security and earn rewards!</p>
+            </div>
+
+            <div class="program-overview">
+                <h2>Program Overview</h2>
+                <p>We are offering a bug bounty program to identify vulnerabilities in our system. If you find any security issues, please report them using the form below. We appreciate your help in making our product more secure!</p>
+            </div>
+
+            <div class="program-scope">
+                <h2>Scope</h2>
+                <ul>
+                    <li><strong>Website</strong> - Any critical vulnerabilities such as XSS, SQL Injection, etc.</li>
+                    <li><strong>API</strong> - Issues related to authentication, authorization, and data access.</li>
+                    <li><strong>Mobile Apps</strong> - Android and iOS applications (please specify the platform when submitting).</li>
+                    <li><strong>Smart Contracts</strong> - Issues related to Ethereum-based smart contracts used in our platform.</li>
+                </ul>
+            </div>
+
+            <div class="program-rules">
+                <h2>Program Rules</h2>
+                <ul>
+                    <li>No social engineering or phishing attacks.</li>
+                    <li>Only report issues that are not publicly disclosed.</li>
+                    <li>Do not disrupt service during testing.</li>
+                    <li>Submit complete and clear reports with all necessary details for reproduction.</li>
+                </ul>
+            </div>
+
+            <div class="program-rewards">
+                <h2>Rewards</h2>
+                <p>Rewards will be determined based on the severity of the vulnerability found. The following is a guideline:</p>
+                <ul>
+                    <li><strong>Critical:</strong> $5,000 - $10,000</li>
+                    <li><strong>High:</strong> $1,000 - $4,999</li>
+                    <li><strong>Medium:</strong> $500 - $999</li>
+                    <li><strong>Low:</strong> $50 - $499</li>
+                </ul>
+            </div>
+
+            <div class="submission-form">
+                <h2>Submit Your Findings</h2>
+                <form action="#" method="POST">
+                    <label for="title">Vulnerability Title:</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="description">Vulnerability Description:</label>
+                    <textarea id="description" name="description" rows="6" required></textarea>
+
+                    <label for="steps">Steps to Reproduce:</label>
+                    <textarea id="steps" name="steps" rows="6" required></textarea>
+
+                    <label for="severity">Severity:</label>
+                    <select id="severity" name="severity" required>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+
+                    <label for="attachment">Attachment (Optional):</label>
+                    <input type="file" id="attachment" name="attachment">
+
+                    <button type="submit">Submit Report</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FindHuntr. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
